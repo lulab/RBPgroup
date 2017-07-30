@@ -111,7 +111,7 @@ Run `NMF.estimate.R` on the example
 ```bash
 bin/NMF.estimate.R -i data/example.txt -s 5 -e 25 -o output/estiRank/example.estiRank
 ```
-The output files of the example can be found in `data/estiRank/`. The output files may be different each time
+Sample output files of the example can be found in `data/estiRank/`. The output files may be different each time
 because random seed is selected based on the current time.
 
 The most important quality measures in the output pdf file are cophenetic correlation coefficient (CPCC) and
@@ -164,7 +164,7 @@ Run `NMF.main.R` with rank 18 on the example:
 ```bash
 bin/NMF.main.R -i data/example.txt -r 18 -n 100 -o output/main/example.18
 ```
-The output files can be found in `data/main/`.
+The output files can be found in `data/main/example.18.*`.
 
 ### Extract the cluster components
 The coefficient matrix contains the weights of each feature (RBP) in the clusters.
@@ -186,6 +186,10 @@ optional arguments:
                         the threshold for coefficient matrix values to define
                         cluster components. [default = 0.2]
 ```
-
+Run `NMF.assign_clusters.R` on the coefficient matrix:
+```bash
+bin/NMF.assign_clusters.R -i output/main/example.18.coef -o output/assign_clusters/example.18.assign_cluster.txt
+```
+A sample output file can be found in `data/assign_clusters/example.18.assign_cluster.txt`.
 
 
