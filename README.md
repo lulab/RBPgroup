@@ -60,7 +60,7 @@ KL divergence with orthogonality regularization (KL_ortho) and Euclidean distanc
 
 The KL divergence is used by default because it leads to RBP clusters that are better supported by known PPI-networks
 based on our experiments. The Euclidean distance is a common cost function for NMF, but tends to find a single cluster
-with a large number of RBPs. A comparison of the four NMF algorithms can be found in `doc/Comparison_of_NMF_algorithms.pdf`.
+with a large number of RBPs.
 
 [iONMF](https://academic.oup.com/bioinformatics/article/32/10/1527/1742711/Orthogonal-matrix-factorization-enables) includes
 an orthogonality regularization term that is useful for finding non-overlapping clusters. The weight on orthogonality
