@@ -127,7 +127,6 @@ estim <- lapply(ranks, function(r){
     }else if(args$method == "euclidean_ortho" || args$method == "KL_ortho"){
         nmf_args$alpha <- args$alpha
     }
-    if(args)
     fit <- do.call(nmf, nmf_args)
     list(fit = fit, coph = cophcor(fit), disp = dispersion(fit), rsdl = residuals(fit), consensus = consensus(fit))
 })
