@@ -16,7 +16,7 @@ parser <- ArgumentParser()
 # by default ArgumentParser will add an help option
 parser$add_argument("-i", "--input", required=TRUE, help="input matrix")
 parser$add_argument("-o", "--output", required=TRUE, help="output file prefix")
-parser$add_argument("-r", "--rank", required=TRUE, type="integer", required=TRUE,
+parser$add_argument("-r", "--rank", required=TRUE, type="integer",
     help="Number of rank",
     metavar="RANK")
 parser$add_argument("--seed", type="integer",
