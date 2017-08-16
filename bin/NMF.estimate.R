@@ -19,7 +19,7 @@ parser$add_argument("-o", "--output", required=TRUE, help="output file prefix")
 parser$add_argument("-s", "--start", required=TRUE, type="integer", default=1,
     help="Number of start rank [default %(default)s]",
     metavar="RANK")
-parser$add_argument("-e", "--end", required=TRUE, type="integer", required=TRUE,
+parser$add_argument("-e", "--end", required=TRUE, type="integer",
     help="Number of end rank",
     metavar="RANK")
 parser$add_argument('-m', "--method", type="character", default="KL",
