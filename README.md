@@ -160,11 +160,11 @@ output files:
 * `*.coef`: the coefficient matrix
 * `*.consensus`: the consensus matrix
 
-Run `NMF.main.R` with rank 18 on the example:
+Run `NMF.main.R` with rank 3 on the example:
 ```bash
 bin/NMF.main.R -i data/example.txt -r 3 -n 100 -o output/main/example.3
 ```
-The output files can be found in `data/main/example.18.*`.
+The output files can be found in `data/main/example.3.*`.
 
 ### Extract the cluster components
 The coefficient matrix contains the weights of each feature (RBP) in the clusters.
@@ -190,6 +190,6 @@ Run `NMF.assign_clusters.R` on the coefficient matrix:
 ```bash
 bin/NMF.assign_clusters.R -i output/main/example.3.coef -o output/assign_clusters/example.3.assign_cluster.txt
 ```
-A sample output file can be found in `data/assign_clusters/example.18.assign_cluster.txt`.
+A sample output file can be found in `data/assign_clusters/example.3.assign_cluster.txt`.
 
 
