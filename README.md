@@ -109,7 +109,7 @@ output files:
 
 Run `NMF.estimate.R` on the example
 ```bash
-bin/NMF.estimate.R -i data/example.txt -s 5 -e 25 -o output/estiRank/example.estiRank
+bin/NMF.estimate.R -i data/example.mx -s 2 -e 5 -o output/estiRank/example.estiRank
 ```
 Sample output files of the example can be found in `data/estiRank/`. The output files may be different each time
 because random seed is selected based on the current time.
@@ -162,7 +162,7 @@ output files:
 
 Run `NMF.main.R` with rank 18 on the example:
 ```bash
-bin/NMF.main.R -i data/example.txt -r 18 -n 100 -o output/main/example.18
+bin/NMF.main.R -i data/example.txt -r 3 -n 100 -o output/main/example.3
 ```
 The output files can be found in `data/main/example.18.*`.
 
@@ -188,7 +188,7 @@ optional arguments:
 ```
 Run `NMF.assign_clusters.R` on the coefficient matrix:
 ```bash
-bin/NMF.assign_clusters.R -i output/main/example.18.coef -o output/assign_clusters/example.18.assign_cluster.txt
+bin/NMF.assign_clusters.R -i output/main/example.3.coef -o output/assign_clusters/example.3.assign_cluster.txt
 ```
 A sample output file can be found in `data/assign_clusters/example.18.assign_cluster.txt`.
 
