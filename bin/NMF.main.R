@@ -27,10 +27,10 @@ parser$add_argument("-n", "--runs", type="integer", default=30,
     metavar="NUMBER")
 parser$add_argument('-m', "--method", type="character", default="KL",
                     metavar="STRING",
-                    help="the NMF algorithm to use. Should be one of KL,euclidean,ionmf_KL,ionmf_euclidean. [default = %(default)s]")
-parser$add_argument("-a", "--alpha", type="double", default=0,
+                    help="the NMF algorithm to use. Should be one of KL,euclidean,KL_ortho,euclidean_ortho. [default = %(default)s]")
+parser$add_argument("-a", "--alpha", type="double", default=10.0,
                     metavar="NUMBER",
-                    help="regularization factor for orthogonality of the coefficient matrix (iONMF) [default = %(default)s]")
+                    help="regularization factor for orthogonality of the coefficient matrix [default = %(default)s]")
 parser$add_argument("-p", "--processors", type="integer", default=1,
     help="Number of processors to use. This option is useful on multicore *nix or Mac machine only, when performing multiple runs (nrun > 1) [default = %(default)s]",
     metavar="NUMBER")
@@ -43,13 +43,13 @@ args <- parser$parse_args()
 
 library(NMF)
 # Euclidean distance with regularization for orthognnality
-objective.ionmf_euclidean <- function(x, y, alpha=1.0, ...)
+objective.euclidean_ortho <- function(x, y, alpha=1.0, ...)
 {
     w <- .basis(x)
     h <- .coef(x)
     rss(y, fitted(x)) + alpha*rss(h %*% t(h), diag(nrow=nrow(h)))
 }
-nmf_update.ionmf_euclidean <- function(i, v, x, alpha=1.0, eps=1e-100, ...)
+nmf_update.euclidean_ortho <- function(i, v, x, alpha=1.0, eps=1e-100, ...)
 {
     # retrieve each factor
     w <- .basis(x)
@@ -63,19 +63,19 @@ nmf_update.ionmf_euclidean <- function(i, v, x, alpha=1.0, eps=1e-100, ...)
     # avoid numerical underflow
     w <- pmax(w, eps)
     h <- pmax(h, eps)
-    #message('cost = ', objective.ionmf_euclidean(x, v, alpha, ...))
+    #message('cost = ', objective.euclidean_ortho(x, v, alpha, ...))
     # save the model
     .basis(x) <- w
     .coef(x) <- h
     return(x)
 }
-setNMFMethod('ionmf_euclidean',
-             objective=objective.ionmf_euclidean,
-             Update=nmf_update.ionmf_euclidean,
+setNMFMethod('euclidean_ortho',
+             objective=objective.euclidean_ortho,
+             Update=nmf_update.euclidean_ortho,
              Stop='connectivity')
 
 # KL distance with regularization term for orthgonality
-objective.ionmf_KL <- function(x, y, alpha=1.0, ...)
+objective.KL_ortho <- function(x, y, alpha=1.0, ...)
 {
     w <- .basis(x)
     h <- .coef(x)
@@ -83,7 +83,7 @@ objective.ionmf_KL <- function(x, y, alpha=1.0, ...)
     cost <- y*log(y/(wh)) - y + wh + alpha*rss(h %*% t(h), diag(nrow=dim(h)[1]))
     return(cost)
 }
-nmf_update.ionmf_KL <- function(i, v, x, alpha=1.0, eps=1e-100, ...)
+nmf_update.KL_ortho <- function(i, v, x, alpha=1.0, eps=1e-100, ...)
 {
     # retrieve each factor
     w <- .basis(x)
@@ -105,8 +105,8 @@ nmf_update.ionmf_KL <- function(i, v, x, alpha=1.0, eps=1e-100, ...)
     .coef(x) <- h
     return(x)
 }
-setNMFMethod('ionmf_KL', objective=objective.ionmf_KL,
-             Update=nmf_update.ionmf_KL,
+setNMFMethod('KL_ortho', objective=objective.KL_ortho,
+             Update=nmf_update.KL_ortho,
              Stop='connectivity')
 
 output_dir <- dirname(args$output)
@@ -127,7 +127,7 @@ if(args$method == "KL") {
     nmf_args$method <- "brunet"
 }else if(args$method == "euclidean") {
     nmf_args$method <- "lee"
-}else if(args$method == "ionmf_euclidean" || args$method == "ionmf_KL"){
+}else if(args$method == "euclidean_ortho" || args$method == "KL_ortho"){
     nmf_args$alpha <- args$alpha
 }
 data.nmf <- do.call(nmf, nmf_args)
