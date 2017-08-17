@@ -16,10 +16,10 @@ parser <- ArgumentParser()
 # by default ArgumentParser will add an help option
 parser$add_argument("-i", "--input", required=TRUE, help="input matrix")
 parser$add_argument("-o", "--output", required=TRUE, help="output file prefix")
-parser$add_argument("-s", "--start", required=TRUE, type="integer", default=1,
+parser$add_argument("-s", "--start", type="integer", default=1,
     help="Number of start rank [default %(default)s]",
     metavar="RANK")
-parser$add_argument("-e", "--end", required=TRUE, type="integer",
+parser$add_argument("-e", "--end", type="integer", required=TRUE,
     help="Number of end rank",
     metavar="RANK")
 parser$add_argument('-m', "--method", type="character", default="KL",
@@ -31,7 +31,7 @@ parser$add_argument("-a", "--alpha", type="double", default=10.0,
 parser$add_argument("--seed", type="integer",
     help="Seed for the random number generator",
     metavar="NUMBER")
-parser$add_argument("-n", "--runs", type="integer", default=50,
+parser$add_argument("-n", "--runs", type="integer", default=30,
     help="Number of runs to perform [default = %(default)s]",
     metavar="NUMBER")
 parser$add_argument("-p", "--processors", type="integer", default=1,
@@ -119,7 +119,7 @@ ranks <- args$start:args$end
 estim <- lapply(ranks, function(r){
     nmf_args <- list(data, r, method=args$method, nrun=args$runs, maxIter=2000,
         .opt=paste("vmp",args$processors,sep=''))
-    if(!is.null(args$seed)) nmf_args$seed <- seed
+    if(!is.null(args$seed)) nmf_args$seed <- args$seed
     if(args$method == "KL") {
         nmf_args$method <- "brunet"
     }else if(args$method == "euclidean") {

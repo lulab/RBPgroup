@@ -16,13 +16,13 @@ parser <- ArgumentParser()
 # by default ArgumentParser will add an help option
 parser$add_argument("-i", "--input", required=TRUE, help="input matrix")
 parser$add_argument("-o", "--output", required=TRUE, help="output file prefix")
-parser$add_argument("-r", "--rank", required=TRUE, type="integer",
+parser$add_argument("-r", "--rank", type="integer", required=TRUE,
     help="Number of rank",
     metavar="RANK")
 parser$add_argument("--seed", type="integer",
     help="Seed for the random number generator",
     metavar="NUMBER")
-parser$add_argument("-n", "--runs", type="integer", default=100,
+parser$add_argument("-n", "--runs", type="integer", default=30,
     help="Number of runs to perform [default = %(default)s]",
     metavar="NUMBER")
 parser$add_argument('-m', "--method", type="character", default="KL",
@@ -121,7 +121,7 @@ data <- data + 1e-100
 nmf_args <- list(data, args$rank,
     method=args$method, nrun=args$runs, maxIter=2000,
     .opt=paste("vmp",args$processors,sep=''))
-if(!is.null(args$seed)) nmf_args$seed <- seed
+if(!is.null(args$seed)) nmf_args$seed <- args$seed
 
 if(args$method == "KL") {
     nmf_args$method <- "brunet"
