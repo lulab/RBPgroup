@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://v3.bootcss.com/examples/justified-nav/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RBPgroup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./bootstrap/css/justified-nav.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./bootstrap/js/ie-emulation-modes-warning.js"></script><style type="text/css"></style>
+    <script src="./bootstrap/js/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+
+
+<head>
+<link rel="bookmark" type="image/x-icon" href="./favicon.ico"/>
+<link rel="shortcut icon" href="./favicon.ico"/>
+<link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+</head>
+
+  <body>
+
+    <div class="container">
+      
+      <div class="masthead">
+        <p>
+          <font size="20" face="arial" color="SteelBlue"><b>RBP</b></font> 
+          <font size="20" face="arial" color="grey"><b>group</b></font>
+          <img src="./images/RBPgroup_title.jpg" width="40%" align=right>
+        </p>
+        <ul class="nav nav-justified">
+          <li><a href="http://rnatarget.ncrnalab.org">RNAtarget</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./DataSet.html">Data Sets</a></li>
+          <li class="active"><a href="./RegulatoryElements.html">Regulatory Elements</a></li>
+          <li><a href="./Software.html">Software</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+     
+      <div>
+        <h3><strong>Regulatory elements</strong><h3>
+      </div> 
+
+      <ul class="nav nav-tabs nav-justified">
+      <li class="active"><a href="#HEK293" data-toggle="tab">HEK293 cell line</a></li>
+<!--      <li><a href="#HepG2" data-toggle="tab">HepG2 cell line</a></li>
+      <li><a href="#K562" data-toggle="tab">K562 cell line</a></li>
+-->
+      </ul>
+
+<div class="tab-content">
+   <div class="tab-pane fade in active" id="HEK293">
+      <div class="panel panel-default">
+      <!-- Default panel contents -->
+        <div class="panel-heading"><b>The characteristics of group related REs for putative RBP groups</b>
+        </div>
+          <div class="panel-body">
+            <p>We defined 18 RBP co-binding groups, the known functions for each RBP groups and de novo motifs were listed for each RBP group. The downloading of binding sites for each group were also supportted</p>
+            <p>Click to download total binding sites <a class="btn btn-info btn-xs" href="download/HEK293.mRNA.total.binding.sites.bed" role="button">total binding sites</a></p>
+            <p>Click to download the original occupancy matrix <a class="btn btn-info btn-xs" href="download/RBPgroup/data/HEK293Dataset.normMx.normMx.scaledTheta.mRNA.mx" role="button">occupancy matrix</a></p>
+            <p>Click to download the results of RBPgroup <a class="btn btn-info btn-xs" href="download/RBPgroup_results.tar.gz" role="button">RBPgroup results</a></p>
+	</div>
+
+      <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+		  <th>Group</th>
+  <th>Components</th>
+		  <th>Support by physical interactions</th>
+		  <th>Known funtions</th>
+		  <th><i>de novo</i> motif</th>
+		  <th>Download</th>
+		</tr>
+	  </thead>
+	  <tbody>
+            <tr>
+		  <th>2</th>
+		  <th>AGO4, CPSF2, ELAVL1, LIN28A, PUM2, QKI, RBPMS, TNRC6A, TNRC6B, TNRC6C</th>
+		  <th>0.3713</th>
+		  <th>unknown</th>
+		  <th>
+                    <img src="./images/motifs/group.2.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.2.motif2.logo.png" width="60%"></img>
+                  </th>
+		  <th>
+                    <div>
+                    <a class="btn btn-success btn-xs" href="download/motifs/group.2.motif1.txt" role="button" >motif 1</a>
+                    <a class="btn btn-success btn-xs" href="download/motifs/group.2.motif2.txt" role="button" >motif 2</a>
+                    </div>
+                    <a class="btn btn-info btn-xs" href="download/REs/group.2.related.binding.sites.bed" role="button">binding sites</a>
+		 </th>
+		</tr>
+		<tr>
+		  <th>3</th>
+		  <th>EWSR1, FUS, LIN28B, TAF15</th>
+		  <th>0.0448</th>
+		  <th>splicing, polyadenylation, transport, translation</th>
+                  <th>
+                    <img src="./images/motifs/group.3.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.3.motif2.logo.png" width="60%"></img>
+                  </th>
+		  <th>
+			<a class="btn btn-success btn-xs" href="download/motifs/group.3.motif1.txt" role="button" >motif 1</a>
+			<a class="btn btn-success btn-xs" href="download/motifs/group.3.motif2.txt" role="button" >motif 2</a>
+                        <a class="btn btn-info btn-xs" href="download/REs/group.3.related.binding.sites.bed" role="button">binding sites</a>
+		  </th>
+        </tr>
+		<tr>
+		  <th>4</th>
+		  <th>HNRNPA1, HNRNPA2B1, HNRNPF, HNRNPH1, HNRNPM, HNRNPU</th>
+		  <th>0.0000</th>
+		  <th>pre-mRNA processing and splicing</th>
+                  <th>
+                    <img src="./images/motifs/group.4.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.4.motif2.logo.png" width="60%"></img>
+                  </th>
+		  <th>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.4.motif1.txt" role="button" >motif 1</a>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.4.motif2.txt" role="button" >motif 2</a>
+			<a class="btn btn-info btn-xs" href="download/REs/group.4.related.binding.sites.bed" role="button">binding sites</a>
+		  </th>
+        </tr>
+		<tr>
+		  <th>5</th>
+		  <th>CPSF6, NUDT21</th>
+		  <th>0.0373</th>
+		  <th>3' end cleavage and polyadenylation processing</th>
+                  <th>
+                    <img src="./images/motifs/group.5.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.5.motif2.logo.png" width="60%"></img>
+                  </th>
+		  <th>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.5.motif1.txt" role="button" >motif 1</a>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.5.motif2.txt" role="button" >motif 2</a>
+			<a class="btn btn-info btn-xs" href="download/REs/group.5.related.binding.sites.bed" role="button">binding sites</a>
+		  </th>
+        </tr>
+		<tr>
+		  <th>6</th>
+		  <th>CSTF2T, CSTF2</th>
+		  <th>0.5373</th>
+		  <th>3' end cleavage and polyadenylation processing</th>
+                  <th>
+                    <img src="./images/motifs/group.6.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.6.motif2.logo.png" width="60%"></img>
+                  </th>
+		  <th>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.6.motif1.txt" role="button" >motif 1</a>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.6.motif2.txt" role="button" >motif 2</a>
+			<a class="btn btn-info btn-xs" href="download/REs/group.6.related.binding.sites.bed" role="button">binding sites</a>
+		  </th>
+        </tr>
+		<tr>
+		  <th>7</th>
+		  <th>C17orf85, RTCB</th>
+		  <th>0.5373</th>
+		  <th>oxidative demethylation and export</th>
+		  <th>NA</th>
+		  <th>
+                    <p>NA</p>
+                    <a class="btn btn-info btn-xs" href="download/REs/group.7.related.binding.sites.bed" role="button">binding sites</a>
+		  </th>
+        </tr>
+        <tr>
+		  <th>9</th>
+		  <th>AGO1, AGO2, AGO3, AGO4, TNRC6A, TNRC6C</th>
+		  <th>0.0000</th>
+		  <th>degradation related</th>
+                  <th>
+                    <img src="./images/motifs/group.9.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.9.motif2.logo.png" width="60%"></img>
+                  </th>
+		  <th>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.9.motif1.txt" role="button" >motif 1</a>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.9.motif2.txt" role="button" >motif 2</a>
+			<a class="btn btn-info btn-xs" href="download/REs/group.9.related.binding.sites.bed" role="button">binding sites</a>
+		  </th>
+        </tr>
+		</tr>
+		  <th>12</th>
+		  <th>FBL, NOP56, NOP58</th>
+		  <th>0.0018</th>
+		  <th>snRNA processing</th>
+                  <th>
+                    <img src="./images/motifs/group.12.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.12.motif2.logo.png" width="60%"></img>
+                  </th>
+		  <th>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.12.motif1.txt" role="button" >motif 1</a>
+                        <a class="btn btn-success btn-xs" href="download/motifs/group.12.motif2.txt" role="button" >motif 2</a>
+			<a class="btn btn-info btn-xs" href="download/REs/group.12.related.binding.sites.bed" role="button">binding sites</a>
+		  </th>
+		</tr>
+        <tr>
+          <th>13</th>
+          <th>ALKBH5, CPSF1, CPSF2, CPSF3, CPSF4</th>
+          <th>0.0092</th>
+          <th>3' end cleavage and polyadenylation processing</th>
+                  <th>
+                    <img src="./images/motifs/group.13.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.13.motif2.logo.png" width="60%"></img>
+                  </th>
+          <th>
+            <a class="btn btn-success btn-xs" href="download/motifs/group.13.motif1.txt" role="button" >motif 1</a>
+            <a class="btn btn-success btn-xs" href="download/motifs/group.13.motif2.txt" role="button" >motif 2</a>
+            <a class="btn btn-info btn-xs" href="download/REs/group.13.related.binding.sites.bed" role="button">binding sites</a>
+          </th>
+        </tr>
+        <tr>
+          <th>15</th>
+          <th>CPSF6, CPSF7</th>
+          <th>0.0373</th>
+          <th>3' end cleavage and polyadenylation processing</th>
+                  <th>
+                    <img src="./images/motifs/group.15.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.15.motif2.logo.png" width="60%"></img>
+                  </th>
+          <th>
+            <a class="btn btn-success btn-xs" href="download/motifs/group.15.motif1.txt" role="button" >motif 1</a>
+            <a class="btn btn-success btn-xs" href="download/motifs/group.15.motif2.txt" role="button" >motif 2</a>
+            <a class="btn btn-info btn-xs" href="download/REs/group.15.related.binding.sites.bed" role="button">binding sites</a>
+          </th>
+        </tr>
+        <tr>
+          <th>16</th>
+          <th>EWSR1, FXR1, FXR2</th>
+          <th>0.0119</th>
+          <th>transport and translation</th>
+                  <th>
+                    <img src="./images/motifs/group.16.motif1.logo.png" width="60%"></img>
+                  </th>
+          <th>
+            <a class="btn btn-success btn-xs" href="download/motifs/group.16.motif1.txt" role="button" >motif 1</a>
+            <a class="btn btn-info btn-xs" href="download/REs/group.16.related.binding.sites.bed" role="button">binding sites</a>
+          </th>
+        </tr>
+        <tr>
+          <th>18</th>
+          <th>IGF2BP1, IGF2BP2, IGF2BP3</th>
+          <th>0.6076</th>
+          <th>transport and translation</th>
+                  <th>
+                    <img src="./images/motifs/group.18.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.18.motif2.logo.png" width="60%"></img>
+                  </th>
+          <th>
+            <a class="btn btn-success btn-xs" href="download/motifs/group.18.motif1.txt" role="button" >motif 1</a>
+            <a class="btn btn-success btn-xs" href="download/motifs/group.18.motif2.txt" role="button" >motif 2</a>            
+            <a class="btn btn-info btn-xs" href="download/REs/group.18.related.binding.sites.bed" role="button">binding sites</a>
+          </th>
+        </tr>
+	  </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="HepG2">
+      <div class="panel panel-default">
+      <!-- Default panel contents -->
+        <div class="panel-heading"><b>The characteristics of group related REs for putative RBP groups</b>
+        </div>
+          <div class="panel-body">
+            <p>We defined 12 RBP co-binding groups, the known functions for each RBP groups and de novo motifs were listed for each RBP group. The downloading of binding sites for each group were also supportted</p>
+            <p>Click to download total binding sites <a class="btn btn-info btn-xs" href="download/HEK293.mRNA.total.binding.sites.bed" role="button">total binding sites</a></p>
+            <p>Click to download basis matrix <a class="btn btn-info btn-xs" href="download/HEK293.mRNA.18.basis.mx.txt" role="button">basis matrix</a></p>
+          </div>
+
+      <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+                  <th>Group</th>
+  <th>Components</th>
+                  <th>Support by physical interactions</th>
+                  <th>Known funtions</th>
+                  <th><i>de novo</i> motif</th>
+                  <th>Download</th>
+                </tr>
+          </thead>
+          <tbody>
+            <tr>
+                  <th>2</th>
+                  <th>AGO4, CPSF2, ELAVL1, LIN28A, PUM2, QKI, RBPMS, TNRC6A, TNRC6B, TNRC6C</th>
+                  <th>0.3713</th>
+                  <th>unknown</th>
+                  <th>
+                    <img src="./images/motifs/group.2.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.2.motif2.logo.png" width="60%"></img>
+                  </th>
+                  <th>
+                    <div>
+                    <a class="btn btn-success btn-xs" href="download/motifs/group.2.motif1.txt" role="button" >motif 1</a>
+                    <a class="btn btn-success btn-xs" href="download/motifs/group.2.motif2.txt" role="button" >motif 2</a>
+                    </div>
+                    <a class="btn btn-info btn-xs" href="download/REs/group.2.related.binding.sites.bed" role="button">binding sites</a>
+                 </th>
+                </tr>
+                <tr>
+          </tbody>
+        </table>
+      </div>
+   </div>
+
+<div class="tab-pane fade" id="K562">
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+        <div class="panel-heading"><b>The characteristics of group related REs for putative RBP groups</b>
+        </div>
+          <div class="panel-body">
+            <p>We defined 18 RBP co-binding groups, the known functions for each RBP groups and de novo motifs were listed for each RBP group. The downloading of binding sites for each group were also supportted</p>
+            <p>Click to download total binding sites <a class="btn btn-info btn-xs" href="download/HEK293.mRNA.total.binding.sites.bed" role="button">total binding sites</a></p>
+            <p>Click to download basis matrix <a class="btn btn-info btn-xs" href="download/HEK293.mRNA.18.basis.mx.txt" role="button">basis matrix</a></p>
+          </div>
+
+      <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+                  <th>Group</th>
+  <th>Components</th>
+                  <th>Support by physical interactions</th>
+                  <th>Known funtions</th>
+                  <th><i>de novo</i> motif</th>
+                  <th>Download</th>
+                </tr>
+          </thead>
+          <tbody>
+            <tr>
+                  <th>2</th>
+                  <th>AGO4, CPSF2, ELAVL1, LIN28A, PUM2, QKI, RBPMS, TNRC6A, TNRC6B, TNRC6C</th>
+                  <th>0.3713</th>
+                  <th>unknown</th>
+                  <th>
+                    <img src="./images/motifs/group.2.motif1.logo.png" width="60%"></img>
+                    </br>
+                    <img src="./images/motifs/group.2.motif2.logo.png" width="60%"></img>
+                  </th>
+                  <th>
+                    <div>
+                    <a class="btn btn-success btn-xs" href="download/motifs/group.2.motif1.txt" role="button" >motif 1</a>
+                    <a class="btn btn-success btn-xs" href="download/motifs/group.2.motif2.txt" role="button" >motif 2</a>
+                    </div>
+                    <a class="btn btn-info btn-xs" href="download/REs/group.2.related.binding.sites.bed" role="button">binding sites</a>
+                 </th>
+                </tr>
+                <tr>
+          </tbody>
+        </table>
+      </div>
+   </div>
+</div>
+
+      <!-- Site footer -->
+      <div class="footer">
+      <center>
+        <p><a href="http://bioinfo.life.tsinghua.edu.cn">&copy; 2016 lulab @ Tsinghua  </a>| Page design derived from <a href = "http://getbootstrap.com/">Bootstrap</a></p>
+          <script type="text/javascript" src="//ri.revolvermaps.com/0/0/3.js?i=8hfgo37dzwu&amp;b=0&amp;s=30&amp;m=2&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1" async="async"></script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11097376;
+var sc_invisible=0;
+var sc_security="7a1c9402";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify stats"
+href="http://statcounter.com/shopify/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11097376/0/7a1c9402/0/"
+alt="shopify stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+      </center>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://v3.bootcss.com/examples/justified-nav/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RBPgroup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./bootstrap/css/justified-nav.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./bootstrap/js/ie-emulation-modes-warning.js"></script><style type="text/css"></style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+<head>
+<link rel="bookmark" type="image/x-icon" href="./favicon.ico"/>
+<link rel="shortcut icon" href="./favicon.ico"/> 
+<link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+</head>
+
+  <body>
+
+    <div class="container">
+      
+      <div class="masthead">
+        <p>
+          <font size="20" face="arial" color="SteelBlue"><b>RBP</b></font> 
+          <font size="20" face="arial" color="grey"><b>group</b></font>
+		<img src="./images/RBPgroup_title.jpg" width="40%" align=right>
+        </p>
+        <ul class="nav nav-justified">
+          <li><a href="http://rnatarget.ncrnalab.org">RNAtarget</a></li>
+          <li class="active"><a href="./index.html">Home</a></li>
+          <li><a href="./DataSet.html">Data Sets</a></li>
+          <li><a href="./RegulatoryElements.html">Regulatory Elements</a></li>
+          <li><a href="./Software.html">Software</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Jumbotron -->
+      <div align=center class=container>
+        </br>
+        <h2>RNA regulatory elements defined by the combinatorial regulation of RNA-binding proteins</h2>
+      </br>
+      <img src="./images/content.png" width="70%"></img>
+      <p></p>
+      </div>
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-8">
+          <h4>About</h4>
+          <div class="well">
+          <p>Recently, various CLIP-seq technologies have emerged to detect the RNA binding sites associated with RNA binding protein (RBPs). The peak calling is the most challenge part because it is affected by many factors, such as cross-linking efficiency, RNA abundance, etc. However, the current binding sites of CLIP-seq being published are very noisy and heterogeneous: different samples and different peak calling methods generated very different binding sites, varying from hundreds to tens of thousands. 
+<br></br>
+To define a unified, confident binding sites for the RNA community, we developed a non-negative matrix factorization (NMF) method, which classified 48 RBPs and related RNA binding sites into 18 co-binding groups. The idea behind this is that the co-binding of multiple RBPs in a RBP complex (i.e. HNRNP splicing complex) would generate more confident binding sites. To realize this idea, we developed a fine-tuned quality control pipeline followed by NMF, which allowed one RBP grouped into different clusters. We adapted this soft-clustering method because one RBP could co-bind with different co-factors to play different regulatory roles. 
+<br></br>
+In total, we defined 201,203 binding sites associated with 18 RBP groups. Many of the groups can be well validated by known physical interactions. We also demonstrated that the binding sites and binding affinity we defined were better correlated with RBPs’ function, such as alternative splicing and degradation. Moreover, we also showed that the known motifs were better enriched in the co-bound regions than in the binding sites defined by single RBP’s CLIP-seq data.
+<br></br>
+This web-based database provides the binding sites and regulatory elements we found
+            </p>
+	      </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <h4>Citation</h4>
+          <div class="well">
+            <p>
+            <font face="arial" color="SteelBlue"><b>RNA regulatory elements defined by the combinatorial regulation of RNA-binding proteins</b></font>
+            <p></p>
+	    <font color="grey"><b>Yang Li*, Mu Xiao*, Binbin Shi*, Yu-Cheng T. Yang, Dong Wang, Fei Wang, Marco Marcia, and Zhi John Lu</b></font>
+	    </p>
+            <p>Genome Biology</p>
+            <p>* these authors contributed equally.</p>
+          </div>
+            <h4>Contact us</h4>
+            <div class="well">
+            <form name="Contact us" action="mailto:liyang01133@gmail.com" method="post">
+            <p>
+            <textarea name="info" cols="40%" rows="3%" align="center">Suggestions and questions to author</textarea>
+            </p>
+            <input type="submit" class="btn btn-default" name="email" value="submit">
+            </div> 
+          </div>
+        </div>
+	</div>
+      <!-- Site footer -->
+      <div class="footer">
+      <center>
+        <p><a href="http://bioinfo.life.tsinghua.edu.cn">&copy; 2016 lulab @ Tsinghua  </a>| Page design derived from <a href = "http://getbootstrap.com/">Bootstrap</a></p>
+        <div>
+	  <script type="text/javascript" src="//ri.revolvermaps.com/0/0/3.js?i=8hfgo37dzwu&amp;b=0&amp;s=30&amp;m=2&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1" async="async"></script>      
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11097376; 
+var sc_invisible=0; 
+var sc_security="7a1c9402"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify stats"
+href="http://statcounter.com/shopify/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11097376/0/7a1c9402/0/"
+alt="shopify stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+      </div>
+      </center>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
